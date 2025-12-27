@@ -37,8 +37,8 @@ public class ViewFactory(IServiceProvider services, IEnumerable<ViewMapping> map
     public virtual TView Configure<TView>(TView view)
         where TView : VisualElement
     {
-        if(view.BindingContext is null && (!view.IsSet(Xaml.MauiMicro.AutowireProperty) || Xaml.MauiMicro.GetAutowire(view)))
-            SetBindingContext(view);
+        if (view.BindingContext is null && (!view.IsSet(Xaml.MauiMicro.AutowireProperty) || Xaml.MauiMicro.GetAutowire(view)))
+            EnsureBindingContext(view);
 
         behaviorFactory.ApplyBehaviors(view);
 
@@ -82,14 +82,42 @@ public class ViewFactory(IServiceProvider services, IEnumerable<ViewMapping> map
         return view;
     }
 
-    private void SetBindingContext(VisualElement view)
+    private void EnsureBindingContext(VisualElement view)
     {
         var mapping = GetViewMapping(view);
         if (mapping?.ViewModel is null)
             return;
 
-        var provider = GetScopedServiceProvider(view) ?? Services;
-        view.BindingContext = provider.GetRequiredService(mapping.ViewModel);
+        // If a scoped provider is available now, resolve immediately.
+        // Otherwise, defer until the Handler (and MauiContext) is available.
+        var provider = GetScopedServiceProvider(view);
+        if (provider is not null)
+        {
+            view.BindingContext = provider.GetRequiredService(mapping.ViewModel);
+            return;
+        }
+
+        void OnHandlerChanged(object? sender, EventArgs args)
+        {
+            if (sender is not VisualElement ve)
+                return;
+
+            if (ve.Handler?.MauiContext?.Services is not IServiceProvider scoped)
+                return;
+
+            ve.HandlerChanged -= OnHandlerChanged;
+
+            if (ve.BindingContext is not null)
+                return;
+
+            var m = GetViewMapping(ve);
+            if (m?.ViewModel is null)
+                return;
+
+            ve.BindingContext = scoped.GetRequiredService(m.ViewModel);
+        }
+
+        view.HandlerChanged += OnHandlerChanged;
     }
 
     private static IServiceProvider? GetScopedServiceProvider(VisualElement view)
