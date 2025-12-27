@@ -88,7 +88,21 @@ public class ViewFactory(IServiceProvider services, IEnumerable<ViewMapping> map
         if (mapping?.ViewModel is null)
             return;
 
-        view.BindingContext = Services.GetRequiredService(mapping.ViewModel);
+        var provider = GetScopedServiceProvider(view) ?? Services;
+        view.BindingContext = provider.GetRequiredService(mapping.ViewModel);
+    }
+
+    private static IServiceProvider? GetScopedServiceProvider(VisualElement view)
+    {
+        // Prefer the provider associated with the current MAUI context (this is typically a scope)
+        // so scoped services can be resolved correctly.
+        if (view.Handler?.MauiContext?.Services is IServiceProvider handlerServices)
+            return handlerServices;
+
+        if (Application.Current?.Handler?.MauiContext?.Services is IServiceProvider appServices)
+            return appServices;
+
+        return null;
     }
 
     private ViewMapping? GetViewMapping(VisualElement view)
