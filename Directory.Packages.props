@@ -1,10 +1,10 @@
 <Project>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Maui.Controls" Version="8.0.3" Condition="$(IsPackable) == 'true'"/>
-    <PackageVersion Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" Condition="$(IsPackable) != 'true'"/>
+    <PackageVersion Include="Microsoft.Maui.Controls" Version="10.0.1" Condition="$(IsPackable) == 'true'"/>
+    <PackageVersion Include="Microsoft.Maui.Controls" Version="10.0.1" Condition="$(IsPackable) != 'true'"/>
     <PackageVersion Include="ReactiveUI" Version="20.1.63" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
-    <PackageVersion Include="Refit" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.1" />
+    <PackageVersion Include="Refit" Version="9.0.2" />
   </ItemGroup>
 
   <ItemGroup>

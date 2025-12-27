@@ -1,0 +1,307 @@
+{
+  "settings": {
+    "components": {
+      "code": false,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2025-12-27T06:07:48.841814Z",
+  "analysisEndTime": "2025-12-27T06:07:50.4152017Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 4,
+      "issues": 3,
+      "incidents": 5,
+      "effort": 5
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 3,
+        "Optional": 1,
+        "Potential": 1,
+        "Information": 0
+      },
+      "category": {
+        "Project": 3,
+        "NuGet": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src\\MauiMicroMvvm\\MauiMicroMvvm.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "MauiMicroMvvm",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 23,
+        "numberOfCodeFiles": 23,
+        "linesTotal": 906,
+        "linesOfCode": 906,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "a74ca753-4a80-42b2-96bc-d2356f04b394",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\MauiMicroMvvm\\MauiMicroMvvm.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\MauiMicroMvvm\\MauiMicroMvvm.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\MauiMicroMvvm.Rx\\MauiMicroMvvm.Rx.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "MauiMicroMvvm.Rx",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 103,
+        "linesOfCode": 103,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "13652d62-4b4c-48e6-b6b0-eacc313efd92",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\MauiMicroMvvm.Rx\\MauiMicroMvvm.Rx.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\MauiMicroMvvm.Rx\\MauiMicroMvvm.Rx.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\MauiMicroMvvm.Templates\\MauiMicroMvvm.Templates.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "MauiMicroMvvm.Templates",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 0,
+        "numberOfCodeFiles": 0,
+        "linesTotal": 0,
+        "linesOfCode": 0,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "sample\\MauiMicroSample\\MauiMicroSample.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "MauiMicroSample",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0-android",
+          "net8.0-ios",
+          "net8.0-maccatalyst",
+          "net8.0-windows10.0.19041.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 26,
+        "numberOfCodeFiles": 26,
+        "linesTotal": 474,
+        "linesOfCode": 474,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "58120dd8-34fb-48c9-ac2f-617f4c2a0fd6",
+          "ruleId": "NuGet.0002",
+          "projectPath": "sample\\MauiMicroSample\\MauiMicroSample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Console, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.1",
+              "protected": "Microsoft.Extensions.Logging.Console, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.1"
+            },
+            "kind": "File",
+            "path": "sample\\MauiMicroSample\\MauiMicroSample.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Console, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.1",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Console, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.1",
+            "label": "Microsoft.Extensions.Logging.Console 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Console",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3c9ea27f-85e9-4bcd-b520-c2abfe54eda6",
+          "ruleId": "NuGet.0004",
+          "projectPath": "sample\\MauiMicroSample\\MauiMicroSample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Refit, 7.0.0\n\nRecommendation:\n\nRefit, 9.0.2",
+              "protected": "Refit, 7.0.0\n\nRecommendation:\n\nRefit, 9.0.2"
+            },
+            "kind": "File",
+            "path": "sample\\MauiMicroSample\\MauiMicroSample.csproj",
+            "snippet": "Refit, 7.0.0\n\nRecommendation:\n\nRefit, 9.0.2",
+            "protectedSnippet": "Refit, 7.0.0\n\nRecommendation:\n\nRefit, 9.0.2",
+            "label": "Refit 7.0.0",
+            "properties": {
+              "PackageId": "Refit",
+              "PackageVersion": "7.0.0",
+              "PackageNewVersion": "9.0.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "29157cb0-f788-4613-85fc-6c4f430c3fd9",
+          "ruleId": "Project.0002",
+          "projectPath": "sample\\MauiMicroSample\\MauiMicroSample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+              "protected": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows"
+            },
+            "kind": "File",
+            "path": "sample\\MauiMicroSample\\MauiMicroSample.csproj",
+            "snippet": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+            "protectedSnippet": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+            "properties": {
+              "CurrentTargetFramework": "net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0",
+              "RecommendedTargetFramework": "net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "isFeature": false,
+      "description": "NuGet package contains security vulnerabilities.\n\nPackage needs to be upgraded to a newer version that addresses known security vulnerabilities.",
+      "label": "NuGet package contains security vulnerability",
+      "severity": "Optional",
+      "effort": 1
+    }
+  }
+}
