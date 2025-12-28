@@ -5,3 +5,5 @@
 *.csproj.user
 
 Artifacts/
+*.nupkg
+*.snupkg
